@@ -1,0 +1,2 @@
+# Proyecto-Python-OWO-VR
+ Este repositorio integra detección de gestos mediante Python con efectos visuales y hápticos en Unity. Se utiliza **MediaPipe** para detectar la posición de la mano y el gesto de puño, y se envían estos datos en tiempo real a Unity a través de un socket TCP. En Unity, estos datos se utilizan para mover objetos, actualizar efectos visuales y disparar sensaciones hápticas mediante la librería **OWOGame**.
