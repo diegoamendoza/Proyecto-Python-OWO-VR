@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/CameraSelection.unity
+    guid: eb4d490ada705844f870ec1b60ee39a7
+  - enabled: 1
+    path: Assets/Nico/FlorChiliotrichum/Scenes/EscenaFloresWireframe.unity
+    guid: 06acb63357d4a9b4bbfa22140efdde7c
+  - enabled: 0
+    path: Assets/Nico/FlorChiliotrichum/Scenes/EscenaFloresWireframeUnica.unity
+    guid: a483e4b24fce7ef4b86e37ff2b61d60f
+  - enabled: 0
+    path: Assets/Nico/Nuez/Scenes/Nuez.unity
+    guid: 232e5d73aa9ca754aa65a7bb00aaec0a
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 65f8a6e7d4aab3e47ae20599dfb014e8,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: c3de75c1b7a5f974485eb97573305216,
+      type: 2}
