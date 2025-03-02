@@ -51,6 +51,10 @@ El proyecto se compone de dos partes principales:
 - **MediaPipeForHandInputWithTriggerController.py:**  
     Script en Python que utiliza OpenCV y MediaPipe para detectar manos,
     enviar la posición de la palma y el gesto de puño a Unity mediante un socket TCP.
+	
+- **MediaPipeUnitySkinetic.py:**  
+	Script que utiliza MediaPipe para detectar las manos a partir de la cámara, extraer información de la posición del pulso y determinar gestos para disparar animaciones. 
+	Los datos se envían a Unity mediante una conexión TCP.
 
 
 ## HandInputController.cs
