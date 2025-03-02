@@ -7,7 +7,8 @@ public class ExecutePythonScript : MonoBehaviour
     public enum PythonScriptOptions
     {
         MediaPipeForHandInputWithTriggerController,
-        MediaPipeForHandInputController
+        MediaPipeForHandInputController,
+        MediaPipeForUnitySkinetic
     }
 
     // Variable pública para seleccionar el script desde el Inspector
@@ -28,9 +29,19 @@ public class ExecutePythonScript : MonoBehaviour
         try
         {
             // Determinar el nombre del script según la selección en el Inspector
-            string scriptName = selectedScript == PythonScriptOptions.MediaPipeForHandInputWithTriggerController
-                ? "MediaPipeForHandInputWithTriggerController.py"
-                : "MediaPipeForHandInputController.py";
+            string scriptName = "";
+            switch(selectedScript)
+            {
+                case PythonScriptOptions.MediaPipeForHandInputWithTriggerController:
+                    scriptName = "MediaPipeForHandInputWithTriggerController.py";
+                    break;
+                case PythonScriptOptions.MediaPipeForHandInputController:
+                    scriptName = "MediaPipeForHandInputController.py";
+                    break;
+                case PythonScriptOptions.MediaPipeForUnitySkinetic:
+                    scriptName = "MediaPipeUnitySkinetic.py";
+                    break;
+            }
 
             // Construir la ruta completa del script dentro de la carpeta StreamingAssets
             string pythonScriptPath = System.IO.Path.Combine(Application.streamingAssetsPath, scriptName);
