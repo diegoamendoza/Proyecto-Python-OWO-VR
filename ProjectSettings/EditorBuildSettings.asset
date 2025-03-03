@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/CameraSelection.unity
     guid: eb4d490ada705844f870ec1b60ee39a7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Nico/FlorChiliotrichum/Scenes/EscenaFloresWireframe.unity
     guid: 06acb63357d4a9b4bbfa22140efdde7c
   - enabled: 0
     path: Assets/Nico/FlorChiliotrichum/Scenes/EscenaFloresWireframeUnica.unity
     guid: a483e4b24fce7ef4b86e37ff2b61d60f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Nico/Nuez/Scenes/Nuez.unity
     guid: 232e5d73aa9ca754aa65a7bb00aaec0a
   m_configObjects:
