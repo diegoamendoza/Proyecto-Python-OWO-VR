@@ -239,7 +239,7 @@ Material:
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
     - _Scaling: 1.25
-    - _SineMagnitude: 0.039999988
+    - _SineMagnitude: 0.009999965
     - _SineSpeed: 2
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1

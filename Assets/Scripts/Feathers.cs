@@ -4,7 +4,7 @@ using System.Net.Sockets;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
-using OWOGame;
+
 public class Feathers : MonoBehaviour
 {
     public TcpListener tcpListener;
@@ -12,7 +12,6 @@ public class Feathers : MonoBehaviour
     private NetworkStream stream;
     private byte[] data = new byte[1024];
     public Text connectionStatusText;
-    public Text OWOconnectionStatusText;
     public Rigidbody targetRigidbody; // Rigidbody para aplicar fuerza o movimiento
     public float forceStrength = 5.0f; // Fuerza al detectar un puño
     public Transform plumasTransform; // Objeto para representar la posición de la mano
@@ -20,11 +19,10 @@ public class Feathers : MonoBehaviour
     private bool isPythonConnected = false;
     public float lerpTime = 10;
     public HapticEffect m_hapticEffect;
-    Sensation OWOsensation = "15~Ball~100,10,98,0,200,0,Impact~alert-3~";
+
     void Start()
     {
         StartListening();
-        if(m_hapticEffect == null) OWO.AutoConnect();
     }
 
     void StartListening()
@@ -69,12 +67,6 @@ public class Feathers : MonoBehaviour
 
     void Update()
     {
-        if(m_hapticEffect == null && OWOconnectionStatusText != null)
-        {
-            string connection = OWO.ConnectionState.ToString();
-            OWOconnectionStatusText.text = "OWO Connection State: " + connection;
-        }
-
         if (stream != null && stream.DataAvailable)
         {
             int bytesRead = stream.Read(data, 0, data.Length);
@@ -124,14 +116,8 @@ public class Feathers : MonoBehaviour
         if (targetRigidbody != null)
         {
             targetRigidbody.AddForce(Vector3.up * forceStrength, ForceMode.Impulse);
-            if(m_hapticEffect != null)
-            {
             m_hapticEffect.PlayEffect();
-            }
-            else
-            {
-                OWO.Send(OWOsensation);
-            }
+
 
         }
     }
@@ -162,7 +148,6 @@ public class Feathers : MonoBehaviour
     void OnApplicationQuit()
     {
         StopListening();
-        OWO.Disconnect();
     }
 
    

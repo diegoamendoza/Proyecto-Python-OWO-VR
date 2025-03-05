@@ -14,23 +14,24 @@ Material:
   m_ValidKeywords:
   - _ALPHATEST_ON
   - _DOUBLESIDED_ON
+  - _ENABLE_FOG_ON_TRANSPARENT
   - _MATERIAL_FEATURE_TRANSMISSION
   - _NORMALMAP_TANGENT_SPACE
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
   - _ALPHATOMASK_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
-  m_CustomRenderQueue: 2475
+  m_CustomRenderQueue: 3009
   stringTagMap:
     MotionVector: User
-    RenderType: TransparentCutout
+    RenderType: Transparent
   disabledShaderPasses:
   - MOTIONVECTORS
   - TransparentDepthPostpass
   - TransparentBackface
   - RayTracingPrepass
-  - TransparentDepthPrepass
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -146,7 +147,7 @@ Material:
     - _AlphaCutoffPostpass: 0.5
     - _AlphaCutoffPrepass: 0.5
     - _AlphaCutoffShadow: 0
-    - _AlphaDstBlend: 0
+    - _AlphaDstBlend: 10
     - _AlphaSrcBlend: 1
     - _AlphaThresholdShadow: 0.498
     - _AlphaToMask: 1
@@ -165,14 +166,14 @@ Material:
     - _DetailNormalScale: 1
     - _DetailSmoothnessScale: 1
     - _DiffusionProfile: 0
-    - _DiffusionProfileHash: 2.3729115
+    - _DiffusionProfileHash: 2.4338708
     - _DisplacementLockObjectScale: 1
     - _DisplacementLockTilingScale: 1
     - _DisplacementMode: 0
     - _DoubleSidedEnable: 1
     - _DoubleSidedGIMode: 0
     - _DoubleSidedNormalMode: 1
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _EmissiveColorMode: 1
     - _EmissiveExposureWeight: 1
     - _EmissiveIntensity: 1
@@ -247,7 +248,7 @@ Material:
     - _StencilWriteMaskMV: 40
     - _SubsurfaceMask: 0.429
     - _SupportDecals: 1
-    - _SurfaceType: 0
+    - _SurfaceType: 1
     - _TexWorldScale: 1
     - _TexWorldScaleEmissive: 1
     - _Thickness: 0.127
@@ -257,7 +258,7 @@ Material:
     - _TransparentCullMode: 2
     - _TransparentDepthPostpassEnable: 0
     - _TransparentDepthPrepassEnable: 0
-    - _TransparentSortPriority: 50
+    - _TransparentSortPriority: 9
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 1
     - _UVBase: 0
@@ -274,8 +275,8 @@ Material:
     - _BaseColor: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0.4150943, g: 0.4150943, b: 0.4150943, a: 1}
-    - _DiffusionProfileAsset: {r: -4.5438546e-17, g: -1.1525113e-26, b: -1.5146568e+28,
-        a: 1.3140146e+20}
+    - _DiffusionProfileAsset: {r: -4.546388e+34, g: 2.4210141e-26, b: 2.4143518e+10,
+        a: 1.41089195e+17}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0}
@@ -305,7 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DiffusionProfileReferences:
-  - {fileID: 11400000, guid: 5e8c51a444476494cac343eef8f1e360, type: 2}
+  - {fileID: 11400000, guid: ad180cf900c4ef141be2b350f09ffa5b, type: 2}
   m_MaterialReferences: []
 --- !u!114 &6638176128613442962
 MonoBehaviour:
